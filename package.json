@@ -3,6 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "type": "module",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/emailbypasser-del"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
