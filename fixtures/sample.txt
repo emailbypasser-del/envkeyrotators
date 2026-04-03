@@ -1,0 +1,3 @@
+KEY5="A_FROM_TXT"
+KEY6="B_FROM_TXT"
+

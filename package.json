@@ -1,0 +1,47 @@
+{
+  "name": "@angloqq03/ekr",
+  "version": "1.1.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./node": {
+      "import": "./dist/node.js",
+      "require": "./dist/node.cjs"
+    }
+  },
+  "bin": {
+    "envkeyrotators": "./dist/cli.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test:cli": "node ./dist/cli.cjs --file ./.env.sample",
+    "test:fixtures:env": "node ./dist/cli.cjs --file ./fixtures/sample.env --key KEY1 --format json",
+    "test:fixtures:keys": "node ./dist/cli.cjs --file ./fixtures/sample.keys --format dotenv",
+    "test:fixtures:txt": "node ./dist/cli.cjs --file ./fixtures/sample.txt --format dotenv",
+    "test:fixtures:json": "node ./dist/cli.cjs --file ./fixtures/sample.json --format json",
+    "test:discover": "node ./dist/cli.cjs --dir ./fixtures --show-source"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@angloqq03/gpv": "^1.1.4"
+  }
+}
